@@ -10,4 +10,12 @@
 
 @implementation BlockExamples
 
+- (void)methodThatTakesABlock:(nullable TestBlock)block
+{
+}
+
+- (void)anotherMethodThatTakesABlock:(nonnull TestBlock2)block
+{
+}
+
 @end
