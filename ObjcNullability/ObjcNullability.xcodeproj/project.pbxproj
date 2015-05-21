@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		905582091B0E284700BF6BB0 /* BlockExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = 905582081B0E284700BF6BB0 /* BlockExamples.m */; };
 		9063A6281AE6CCF100824D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9063A6271AE6CCF100824D25 /* AppDelegate.swift */; };
 		9063A62A1AE6CCF100824D25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9063A6291AE6CCF100824D25 /* ViewController.swift */; };
 		9063A62D1AE6CCF100824D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9063A62B1AE6CCF100824D25 /* Main.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		905582071B0E284700BF6BB0 /* BlockExamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockExamples.h; sourceTree = "<group>"; };
+		905582081B0E284700BF6BB0 /* BlockExamples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockExamples.m; sourceTree = "<group>"; };
 		9063A6221AE6CCF100824D25 /* ObjcNullability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjcNullability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9063A6261AE6CCF100824D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9063A6271AE6CCF100824D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				9063A6291AE6CCF100824D25 /* ViewController.swift */,
 				9063A6481AE6CD2A00824D25 /* TestClass.h */,
 				9063A6491AE6CD2A00824D25 /* TestClass.m */,
+				905582071B0E284700BF6BB0 /* BlockExamples.h */,
+				905582081B0E284700BF6BB0 /* BlockExamples.m */,
 				9063A62B1AE6CCF100824D25 /* Main.storyboard */,
 				9063A62E1AE6CCF100824D25 /* Images.xcassets */,
 				9063A6301AE6CCF100824D25 /* LaunchScreen.xib */,
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				905582091B0E284700BF6BB0 /* BlockExamples.m in Sources */,
 				9063A64A1AE6CD2A00824D25 /* TestClass.m in Sources */,
 				9063A62A1AE6CCF100824D25 /* ViewController.swift in Sources */,
 				9063A6281AE6CCF100824D25 /* AppDelegate.swift in Sources */,
@@ -422,6 +428,7 @@
 				9063A6431AE6CCF100824D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9063A6441AE6CCF100824D25 /* Build configuration list for PBXNativeTarget "ObjcNullabilityTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				9063A6461AE6CCF100824D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
