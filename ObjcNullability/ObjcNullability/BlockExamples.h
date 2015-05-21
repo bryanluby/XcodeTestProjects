@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^TestBlock3)(NSString *aString);
 NS_ASSUME_NONNULL_END
 
+typedef NSString *__nonnull(^TestBlock4)(NSString *__nonnull aString);
+
 @interface BlockExamples : NSObject
 
 - (void)methodThatTakesABlock:(nullable TestBlock)block;
