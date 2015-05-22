@@ -5,6 +5,7 @@
 - [ActivityTracing](ActivityTracing) - Testing out activity tracing.
 - [CollectionOfBlocks](CollectionOfBlocks) - An `NSDictionary` of blocks.
 - [CollectionViewWithCustomTransition](CollectionViewWithCustomTransition) - Custom view controller transition from a collection view.
+- [GeneratorOfTest](GeneratorOfTest) - Testing out GeneratorOf in Swift.
 - [GlobalKeyEvents](GlobalKeyEvents) - Global monitoring of `NSKeyDownMask`.
 - [MaskViewProperty](MaskViewProperty) - Using the `UIView` `maskView` property that was added in iOS 8.
 - [MVVMWithKVO](MVVMWithKVO) - Implementing MVVM with key-value observing.
