@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var item = 0
+
+    @IBAction func buttonPressed() {
+        incrementGen()
+    }
+
+    func incrementGen() {
+        var genOf = GeneratorOf { self.item++ }
+        if let nextGen = genOf.next() {
+            println(item)
+        }
     }
 }
