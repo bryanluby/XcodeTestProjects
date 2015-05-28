@@ -8,6 +8,18 @@
 
 #import "ViewController.h"
 
+@interface ViewController ()
+
+@property (nonatomic, weak) IBOutlet NSTextField *usernameTextField;
+@property (nonatomic, weak) IBOutlet NSTextField *passwordTextField;
+
+@end
+
 @implementation ViewController
+
+- (IBAction)saveButtonPressed:(id)sender
+{
+    
+}
 
 @end
