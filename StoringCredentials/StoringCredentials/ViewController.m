@@ -19,7 +19,23 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
+    [self saveCredentials];
+}
+
+- (void)saveCredentials
+{
+    NSURLCredential *credential = [NSURLCredential credentialWithUser:self.usernameTextField.stringValue
+                                                             password:self.passwordTextField.stringValue
+                                                          persistence:NSURLCredentialPersistencePermanent];
     
+    NSURLProtectionSpace *protectionSpace = [[NSURLProtectionSpace alloc] initWithHost:@"www.example.com"
+                                                                                  port:0
+                                                                              protocol:@"http"
+                                                                                 realm:nil
+                                                                  authenticationMethod:nil];
+    
+    [[NSURLCredentialStorage sharedCredentialStorage] setCredential:credential
+                                                 forProtectionSpace:protectionSpace];
 }
 
 @end
