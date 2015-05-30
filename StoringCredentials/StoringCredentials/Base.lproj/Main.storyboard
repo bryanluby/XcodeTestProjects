@@ -650,11 +650,12 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Saving Credentials" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="Saving Credentials" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="250" height="270"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -669,27 +670,27 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="123"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-QY-JNK">
-                                <rect key="frame" x="20" y="228" width="249" height="22"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-QY-JNK" userLabel="Username Text Field">
+                                <rect key="frame" x="20" y="81" width="440" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" id="Aun-0W-nKt">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXe-UG-508">
-                                <rect key="frame" x="20" y="196" width="249" height="22"/>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NXe-UG-508" userLabel="Password Text Field" customClass="NSSecureTextField">
+                                <rect key="frame" x="20" y="49" width="440" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" id="sXf-Da-CbW">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Soq-Gx-gb5">
-                                <rect key="frame" x="14" y="160" width="71" height="32"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Soq-Gx-gb5">
+                                <rect key="frame" x="205" y="13" width="71" height="32"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CEP-3K-MiR">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -699,6 +700,18 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="NXe-UG-508" firstAttribute="leading" secondItem="ZXh-QY-JNK" secondAttribute="leading" id="6hY-o9-CMa"/>
+                            <constraint firstItem="NXe-UG-508" firstAttribute="top" secondItem="ZXh-QY-JNK" secondAttribute="bottom" constant="10" id="PGp-Yb-aSI"/>
+                            <constraint firstItem="Soq-Gx-gb5" firstAttribute="centerX" secondItem="NXe-UG-508" secondAttribute="centerX" constant="0.5" id="TyD-zJ-gSK"/>
+                            <constraint firstItem="ZXh-QY-JNK" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="XZ3-5W-5mh"/>
+                            <constraint firstAttribute="trailing" secondItem="ZXh-QY-JNK" secondAttribute="trailing" constant="20" id="XsO-j6-bIH"/>
+                            <constraint firstItem="NXe-UG-508" firstAttribute="height" secondItem="ZXh-QY-JNK" secondAttribute="height" id="Z8Q-jL-MJd"/>
+                            <constraint firstItem="NXe-UG-508" firstAttribute="trailing" secondItem="ZXh-QY-JNK" secondAttribute="trailing" id="e7o-qT-cQA"/>
+                            <constraint firstItem="ZXh-QY-JNK" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="fce-ah-ER8"/>
+                            <constraint firstAttribute="bottom" secondItem="NXe-UG-508" secondAttribute="bottom" constant="49" id="j2Z-4D-HBL"/>
+                            <constraint firstItem="Soq-Gx-gb5" firstAttribute="top" secondItem="NXe-UG-508" secondAttribute="bottom" constant="8" id="slF-Xy-3JA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="NXe-UG-508" id="aHX-cf-Psb"/>
@@ -707,7 +720,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="581.5"/>
         </scene>
     </scenes>
 </document>
