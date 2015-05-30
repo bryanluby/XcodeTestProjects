@@ -26,7 +26,9 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
-    [self saveDefaultCredential];
+    [self saveDefaultCredentialForUsername:self.usernameTextField.stringValue
+                                  password:self.passwordTextField.stringValue
+                           protectionSpace:[self protectionSpace]];
 }
 
 - (NSURLProtectionSpace *)protectionSpace
@@ -58,26 +60,28 @@
     NSLog(@"\n--- Credentials ---\nUsername: %@\nPassword: %@", defaultCredential.user, defaultCredential.password);
 }
 
-- (void)saveDefaultCredential
+- (void)saveDefaultCredentialForUsername:(NSString *)username
+                                password:(NSString *)password
+                         protectionSpace:(NSURLProtectionSpace *)protectionSpace
 {
-    [self removePreviousDefaultCredential];
+    [self removePreviousDefaultCredentialForProtectionSpace:protectionSpace];
     
-    NSURLCredential *newDefaultCredential = [NSURLCredential credentialWithUser:self.usernameTextField.stringValue
-                                                                       password:self.passwordTextField.stringValue
+    NSURLCredential *newDefaultCredential = [NSURLCredential credentialWithUser:username
+                                                                       password:password
                                                                     persistence:NSURLCredentialPersistencePermanent];
     
     [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:newDefaultCredential
-                                                        forProtectionSpace:[self protectionSpace]];
+                                                        forProtectionSpace:protectionSpace];
 }
 
-- (void)removePreviousDefaultCredential
+- (void)removePreviousDefaultCredentialForProtectionSpace:(NSURLProtectionSpace *)protectionSpace
 {
     NSURLCredential *previousDefaultCredential = [[NSURLCredentialStorage sharedCredentialStorage]
-                                                  defaultCredentialForProtectionSpace:[self protectionSpace]];
+                                                  defaultCredentialForProtectionSpace:protectionSpace];
     
     [[NSURLCredentialStorage sharedCredentialStorage]
      removeCredential:previousDefaultCredential
-     forProtectionSpace:[self protectionSpace]];
+     forProtectionSpace:protectionSpace];
 }
 
 @end
