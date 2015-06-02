@@ -78,10 +78,11 @@
 {
     NSURLCredential *previousDefaultCredential = [[NSURLCredentialStorage sharedCredentialStorage]
                                                   defaultCredentialForProtectionSpace:protectionSpace];
-    
-    [[NSURLCredentialStorage sharedCredentialStorage]
-     removeCredential:previousDefaultCredential
-     forProtectionSpace:protectionSpace];
+
+    if (previousDefaultCredential) {
+        [[NSURLCredentialStorage sharedCredentialStorage] removeCredential:previousDefaultCredential
+                                                        forProtectionSpace:protectionSpace];
+    }
 }
 
 @end
