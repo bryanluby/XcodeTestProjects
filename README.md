@@ -15,6 +15,7 @@
 - [ObjectDescriptionUtility](ObjectDescriptionUtility) - Print out all properties for an object.
 - [ObjectsInIB](ObjectsInIB) - Using a generic object in Interface Builder.
 - [PolymorphMe](PolymorphMe) - Fun with polymorphism.
+- [QuickLookDebugging](QuickLookDebugging) - Testing out quicklook debugging.
 - [ResponderChaining](ResponderChaining) - The responder chain.
 - [SecureCoding](SecureCoding) - `NSSecureCoding`.
 - [SetNilValueForKey](SetNilValueForKey) - `setNilValueForKey:`.
