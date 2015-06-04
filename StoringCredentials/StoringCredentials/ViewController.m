@@ -55,9 +55,9 @@
     static NSURLProtectionSpace *_protectionSpace;
     
     dispatch_once(&onceToken, ^{
-        _protectionSpace = [[NSURLProtectionSpace alloc] initWithHost:@"www.example.com"
+        _protectionSpace = [[NSURLProtectionSpace alloc] initWithHost:@"www.instapaper.com"
                                                                  port:0
-                                                             protocol:@"http"
+                                                             protocol:NSURLProtectionSpaceHTTPS
                                                                 realm:nil
                                                  authenticationMethod:nil];
     });
@@ -86,7 +86,7 @@
     
     NSURLCredential *newDefaultCredential = [NSURLCredential credentialWithUser:username
                                                                        password:password
-                                                                    persistence:NSURLCredentialPersistencePermanent];
+                                                                    persistence:NSURLCredentialPersistenceForSession];
     
     [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:newDefaultCredential
                                                         forProtectionSpace:protectionSpace];
@@ -112,7 +112,10 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
     NSURLCredential *defaultCredential = [[NSURLCredentialStorage sharedCredentialStorage]
                                           defaultCredentialForProtectionSpace:[self protectionSpace]];
 
-    if (defaultCredential.user && defaultCredential.hasPassword) {
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+        NSURLCredential *cred = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+        completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
+    } else if (defaultCredential.user && defaultCredential.hasPassword) {
         completionHandler(NSURLSessionAuthChallengeUseCredential, defaultCredential);
     } else {
         completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
@@ -121,7 +124,10 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
+    NSURLRequest *request = task.originalRequest;
+    NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
 
+    NSLog(@"\nRequest: %@\nResponse: %@", request, response);
 }
 
 @end
