@@ -21,6 +21,7 @@
 - [SetNilValueForKey](SetNilValueForKey) - `setNilValueForKey:`.
 - [SpringyCollectionView](SpringyCollectionView) - A springy `UICollectionViewFlowLayout`.
 - [StoringCredentials](StoringCredentials) - Testing out storing `NSURLCredential`.
+- [SwiftGenerators](SwiftGenerators) - Testing out Swift generators.
 - [UIKeyCommander](UIKeyCommander) - `UIKeyCommand`.
 - [UIViewControllerCustomTransitions](UIViewControllerCustomTransitions) - Some custom view controller transitions.
 - [UIWebViewPagination](UIWebViewPagination) - Pagination and altering content with a web view.
