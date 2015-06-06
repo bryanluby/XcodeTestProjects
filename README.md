@@ -22,6 +22,7 @@
 - [SpringyCollectionView](SpringyCollectionView) - A springy `UICollectionViewFlowLayout`.
 - [StoringCredentials](StoringCredentials) - Testing out storing `NSURLCredential`.
 - [SwiftGenerators](SwiftGenerators) - Testing out Swift generators.
+- [SwiftScratchpad](SwiftScratchpad) - Testing out random Swift things.
 - [UIKeyCommander](UIKeyCommander) - `UIKeyCommand`.
 - [UIViewControllerCustomTransitions](UIViewControllerCustomTransitions) - Some custom view controller transitions.
 - [UIWebViewPagination](UIWebViewPagination) - Pagination and altering content with a web view.
