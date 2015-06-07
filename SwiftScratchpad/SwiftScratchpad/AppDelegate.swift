@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 //        zipTester()
         testFunc()
-
+        testQueue()
         return true
     }
     
@@ -86,6 +86,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let ys = ["White", "Smith", "Doe"]
         let zippedWith = myZipWith2(xs, ys) { $0 + " " + $1 }
         println("zippedWith: \(zippedWith)")
+    }
+
+    func testQueue() {
+        callOnBackgroundQueue {
+            println(NSThread.currentThread())
+            callOnMainQueue {
+                println(NSThread.currentThread())
+            }
+        }
     }
     
 }
