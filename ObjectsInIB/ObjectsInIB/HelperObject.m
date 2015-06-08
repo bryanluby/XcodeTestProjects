@@ -8,13 +8,20 @@
 
 #import "HelperObject.h"
 
-@interface HelperObject ()
+@interface HelperObject () <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *borderedViews;
 
 @end
 
 @implementation HelperObject
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+
+    [self applyBorders];
+}
 
 - (void)applyBorders
 {

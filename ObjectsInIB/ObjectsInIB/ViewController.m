@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
 
-    [self.helper applyBorders];
+//    [self.helper applyBorders];
 }
 
 @end
