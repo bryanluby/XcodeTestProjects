@@ -36,17 +36,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("zipped: \(zipped)")
         
         ys = []
-        zipped = myZip(xs, ys)
+        zipped = myZip(xs, b: ys)
         print("zipped: \(zipped)")
         
         xs = []
         ys = [4, 5, 6]
-        zipped = myZip(xs, ys)
+        zipped = myZip(xs, b: ys)
         print("zipped: \(zipped)")
         
         xs = []
         ys = []
-        zipped = myZip(xs, ys)
+        zipped = myZip(xs, b: ys)
         print("zipped: \(zipped)")
         
         xs = [1, 2, 3]
@@ -56,12 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         xs = []
         ys = [4, 5, 6]
-        zippedWith = myZipWith(+, xs, ys)
+        zippedWith = myZipWith(+, a: xs, b: ys)
         print("zippedWith: \(zippedWith)")
         
         xs = [1, 2, 3]
         ys = []
-        zippedWith = myZipWith(+, xs, ys)
+        zippedWith = myZipWith(+, a: xs, b: ys)
         print("zippedWith: \(zippedWith)")
         
         let xs2 = ["Mary", "John", "Jenny"]
