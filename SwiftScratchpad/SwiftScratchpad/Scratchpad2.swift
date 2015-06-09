@@ -41,7 +41,7 @@ func myF1(x: Int) -> Float {
 }
 
 func myF2(x: String) -> Int {
-    return x.toInt()!
+    return Int(x)!
 }
 
 extension Array {
@@ -52,7 +52,7 @@ extension Array {
 
 func myZip<A, B>(a: [A], b: [B]) -> [(A, B)] {
     if let (x, xs) = a.decompose, (y, ys) = b.decompose {
-        return [(x, y)] + myZip(xs, ys)
+        return [(x, y)] + myZip(xs, b: ys)
     } else {
         return []
     }
@@ -60,7 +60,7 @@ func myZip<A, B>(a: [A], b: [B]) -> [(A, B)] {
 
 func myZipWith<A, B, C>(f: (a: A, b: B) -> C, a: [A], b: [B]) -> [C] {
     if let (x, xs) = a.decompose, (y, ys) = b.decompose {
-        return [f(a: x, b: y)] + myZipWith(f, xs, ys)
+        return [f(a: x, b: y)] + myZipWith(f, a: xs, b: ys)
     } else {
         return []
     }
@@ -68,7 +68,7 @@ func myZipWith<A, B, C>(f: (a: A, b: B) -> C, a: [A], b: [B]) -> [C] {
 
 func myZipWith2<A, B, C>(aS: [A], bs: [B], f: (a: A, b: B) -> C) -> [C] {
     if let (x, xs) = aS.decompose, (y, ys) = bs.decompose {
-        return [f(a: x, b: y)] + myZipWith2(xs, ys, f)
+        return [f(a: x, b: y)] + myZipWith2(xs, bs: ys, f: f)
     } else {
         return []
     }

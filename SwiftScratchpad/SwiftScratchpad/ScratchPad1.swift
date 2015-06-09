@@ -28,7 +28,7 @@ func strideTest() {
     let nums3 = [1,2,3,4,5,6,7,8,9,10]
     
     for i in stride(from: nums3[0], through: nums3[9], by: 1) {
-        println(i)
+        print(i)
     }
 }
 
@@ -36,17 +36,17 @@ func patternMatchOperator() {
     let someInt = 4
     
     switch someInt {
-    case let (anInt) where 1...5 ~= anInt: println(anInt) // the "~=" operator means "where 'range' contains 'value'"
-    case (10...20): println("cool")
+    case let (anInt) where 1...5 ~= anInt: print(anInt) // the "~=" operator means "where 'range' contains 'value'"
+    case (10...20): print("cool")
     default: break
     }
     
     if 2...7 ~= someInt {
-        println("Within range")
+        print("Within range")
     }
     
     if "a" ... "h" ~= "b" {
-        println("within string")
+        print("within string")
     }
 
     switch ("hello", "world", "cool") {
@@ -60,9 +60,9 @@ func switchFun() {
     
     pointSwitcher: switch somePoint {
     case (let x, var y):
-        println()
+        print("")
         y = 25
-        println(y)
+        print(y)
     case let (x, y): break
     }
     
@@ -114,8 +114,8 @@ func arrayFun() {
     let someArray = [1, 3, 5, 4, 6, 34, 55, 87, 0, 3, 8]
     
     func doStuff<T>(someArray: [T]) {
-        for (index, element) in enumerate(someArray) {
-            println("\(index) \(element)")
+        for (index, element) in someArray.enumerate() {
+            print("\(index) \(element)")
         }
     }
     
@@ -136,8 +136,8 @@ func arrayFun() {
     let res = calc(3)
     let res2 = calc(400)
     
-    for (idx, element) in enumerate(someArray) {
-        println("hello: \(idx) \(element)")
+    for (idx, element) in someArray.enumerate() {
+        print("hello: \(idx) \(element)")
     }
 
 }
@@ -184,13 +184,13 @@ func comparisons() {
     let classPerson2 = PersonClass(name: "Mary", age: 25)
 
     let objid1 = ObjectIdentifier(classPerson1)
-    println("id1 \(objid1.hashValue)")
+    print("id1 \(objid1.hashValue)")
     let objid2 = ObjectIdentifier(classPerson2)
-    println("id2 \(objid2.hashValue)")
+    print("id2 \(objid2.hashValue)")
     if objid1 == objid2 {
-        println("equal ids")
+        print("equal ids")
     } else {
-        println("not equal ids")
+        print("not equal ids")
     }
 }
 
@@ -226,9 +226,9 @@ func reduceBool() {
     
     let allFalse = falseBools.reduce(false) { $0 == false && $1 == false }
     
-    println("alltrue: \(allTrue)")
-    println("anyFalse: \(anyFalse2)")
-    println("allFalse: \(allFalse)")
+    print("alltrue: \(allTrue)")
+    print("anyFalse: \(anyFalse2)")
+    print("allFalse: \(allFalse)")
 }
 
 func reduceStrings() {
@@ -271,7 +271,7 @@ func mapFilterReduceProperties() {
 //    println(names2)
     
     let names3 = instances.reduce("") { $1.name == "hello" || $1.name == "world" ? $0 + " " + $1.name : $0 }
-    println(names3)
+    print(names3)
     
     let names4: Something = instances.reduce(Something(name: "awesome")) { $1.name == "hello" ? $1 : $0 }
 }
@@ -280,7 +280,7 @@ func strider() {
     let array = [1, 2, 3, 4, 5]
     
     let strided = stride(from: 0, to: 4, by: 2)
-    println(strided)
+    print(strided)
 }
 
 func flattenArrayOfArrays() {
@@ -302,13 +302,13 @@ func reduceGetMinMax() {
 //    println("minInt: \(minInt)")
     
     let maxInt = arrayOfInts.reduce(arrayOfInts.first, combine: { $0 > $1 ? $0 : $1 })
-    println("maxInt: \(maxInt)")
+    print("maxInt: \(maxInt)")
     
-    let minEle = minElement(arrayOfInts)
-    println("minElement: \(minEle)")
+    let minEle = arrayOfInts.minElement()!
+    print("minElement: \(minEle)")
     
-    let maxEle = maxElement(arrayOfInts)
-    println("maxElement: \(maxEle)")
+    let maxEle = arrayOfInts.maxElement()!
+    print("maxElement: \(maxEle)")
 }
 
 func convertToMap() -> [Int] {
@@ -329,7 +329,7 @@ func convertToMap() -> [Int] {
 func reduceToURL() {
     let urlArray = ["http://", "www.apple.com", "/iphone"]
 //    let url = NSURL(string: urlArray.reduce("", +))
-    let url2 = NSURL(string: join("", urlArray))
+    let url2 = NSURL(string: "".join(urlArray))
 }
 
 func testingClosures() {
@@ -339,8 +339,8 @@ func testingClosures() {
     
     var array2 = [1, 25, 5, 2]
     
-    array2.sort { testFunc($0, $1) }
-    println(array2)
+    array2.sortInPlace { testFunc($0, num2: $1) }
+    print(array2)
     
     
     func squarer(num: Int) -> Int {
@@ -357,7 +357,7 @@ func testingClosures() {
 //    println(sumOfSquares)
     
     let squares2 = array2.map { $0.description }
-    println(squares2)
+    print(squares2)
 }
 
 func closureConstants() {
@@ -368,7 +368,7 @@ func closureConstants() {
     let someClosure: String -> String = { $0 + "World" + exclamation }
     
     let anotherClosure = someClosure
-    println(someClosure("Hello "))
+    print(someClosure("Hello "))
 }
 
 func closureShorthand() {
@@ -384,10 +384,10 @@ func closureShorthand() {
         return s1 < s2
     }
     
-    someStrings.sort(sortHelper)
+    someStrings.sortInPlace(sortHelper)
     
-    someStrings.sort(>)
-    println(someStrings)
+    someStrings.sortInPlace(>)
+    print(someStrings)
 }
 
 func variableParamsWithinClosure() {
@@ -399,7 +399,7 @@ func variableParamsWithinClosure() {
         return "the number is \(num)"
     }
 
-    println(newNums)
+    print(newNums)
 }
 
 func setValueOfSomethingFromSwitch() {

@@ -31,7 +31,7 @@ extension EnumDataSourceVC: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        let cell = UITableViewCell()
         cell.textLabel?.text = strings[indexPath.row]
         return cell
     }
