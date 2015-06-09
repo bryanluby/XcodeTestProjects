@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+enum Result<T> {
+    case Success(T)
+    case Failure(NSError)
+}
+
+func testResult() {
+    let successResult: Result = .Success("hello")
+    print(successResult)
+
+    let anError = NSError(
+        domain: NSCocoaErrorDomain,
+        code: 999, userInfo: nil
+    )
+
+    let failureResult: Result = .Failure(anError)
+}
