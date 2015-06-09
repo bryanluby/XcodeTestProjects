@@ -19,6 +19,7 @@
 		90217F9B1A7E5CC40010DC65 /* SwiftScratchpadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90217F9A1A7E5CC40010DC65 /* SwiftScratchpadTests.swift */; };
 		905A4F8C1B21D89500E96430 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A4F8B1B21D89500E96430 /* Constants.swift */; };
 		906756AB1A9119E700A4C22A /* Scratchpad2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906756AA1A9119E700A4C22A /* Scratchpad2.swift */; };
+		907806371B2698DE000BFA52 /* Swift2Scratchpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907806361B2698DE000BFA52 /* Swift2Scratchpad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		90217F9A1A7E5CC40010DC65 /* SwiftScratchpadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftScratchpadTests.swift; sourceTree = "<group>"; };
 		905A4F8B1B21D89500E96430 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		906756AA1A9119E700A4C22A /* Scratchpad2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scratchpad2.swift; sourceTree = "<group>"; };
+		907806361B2698DE000BFA52 /* Swift2Scratchpad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swift2Scratchpad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				9016C0621A9B6C7E00322AC8 /* EnumDataSourceVC.swift */,
 				9007765F1A7FC48D00C2969D /* ScratchPad1.swift */,
 				906756AA1A9119E700A4C22A /* Scratchpad2.swift */,
+				907806361B2698DE000BFA52 /* Swift2Scratchpad.swift */,
 				90217F881A7E5CC40010DC65 /* Main.storyboard */,
 				90217F8B1A7E5CC40010DC65 /* Images.xcassets */,
 				90217F8D1A7E5CC40010DC65 /* LaunchScreen.xib */,
@@ -237,6 +240,7 @@
 				90217F871A7E5CC40010DC65 /* ViewController.swift in Sources */,
 				9016C0631A9B6C7E00322AC8 /* EnumDataSourceVC.swift in Sources */,
 				90217F851A7E5CC40010DC65 /* AppDelegate.swift in Sources */,
+				907806371B2698DE000BFA52 /* Swift2Scratchpad.swift in Sources */,
 				906756AB1A9119E700A4C22A /* Scratchpad2.swift in Sources */,
 				905A4F8C1B21D89500E96430 /* Constants.swift in Sources */,
 			);
