@@ -22,5 +22,17 @@ func testResult() {
         code: 999, userInfo: nil
     )
 
-    let failureResult: Result = .Failure(anError)
+//    let failureResult: Result = .Failure(anError)
+}
+
+func throwIt() throws {
+    print("it works")
+}
+
+func testThrowIt() {
+    do {
+        try throwIt()
+    } catch {
+        print(error)
+    }
 }

@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        zipTester()
         testFunc()
         testQueue()
+        testThrowIt()
         return true
     }
     
