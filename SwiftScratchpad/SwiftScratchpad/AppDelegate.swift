@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         testFunc()
         testQueue()
         testThrowIt()
+        testResult()
         return true
     }
     

@@ -8,21 +8,17 @@
 
 import Foundation
 
-enum Result<T> {
+enum Result<T, U> {
     case Success(T)
-    case Failure(NSError)
+    case Failure(U)
 }
 
 func testResult() {
-    let successResult: Result = .Success("hello")
-    print(successResult)
-
-    let anError = NSError(
-        domain: NSCocoaErrorDomain,
-        code: 999, userInfo: nil
-    )
-
-//    let failureResult: Result = .Failure(anError)
+    let error = NSError(domain: "MyDomain", code: 1, userInfo: nil)
+    let success: Result<String, NSError> = .Success("success result")
+    let fail: Result<String, NSError> = .Failure(error)
+    print(success)
+    print(fail)
 }
 
 func throwIt() throws {
