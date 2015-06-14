@@ -81,3 +81,12 @@ func qsort(var array: [Int]) -> [Int] {
     let greater = array.filter { $0 >= pivot }
     return qsort(lesser) + [pivot] + qsort(greater)
 }
+
+func testQueue() {
+    callOnBackgroundQueue {
+        print(NSThread.currentThread())
+        callOnMainQueue {
+            print(NSThread.currentThread())
+        }
+    }
+}
