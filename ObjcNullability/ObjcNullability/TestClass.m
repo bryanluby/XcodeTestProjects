@@ -21,6 +21,15 @@
     
 }
 
+- (void)aMethodThatHasNullabilityForLocalVariables
+{
+    NSString * __nonnull aString = @"test";
+    NSString * __nullable anotherString = nil;
+    
+    // Not sure if this is even supported since there is no compiler warning?
+    NSString * __nonnull shouldNotBeNil = nil;
+}
+
 @end
 
 @interface SomeOtherClass : NSObject

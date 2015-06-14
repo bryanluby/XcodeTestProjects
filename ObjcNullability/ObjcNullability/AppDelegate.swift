@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let aString: String = anInstance.aMethodThatReturnsANonnullString()
 
         // Correctly triggers a build error
-        anInstance.aMethodThatTakesNonnullParameter(nil)
+//        anInstance.aMethodThatTakesNonnullParameter(nil)
 
         return true
     }
