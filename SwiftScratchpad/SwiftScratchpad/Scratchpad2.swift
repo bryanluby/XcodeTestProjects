@@ -26,6 +26,7 @@ func |> (filter1: StringFilter, filter2: StringFilter) -> StringFilter {
 
 func doStuff() {
     let test = uppercaseFilter("test") |> otherFilter("cool")
+    print(test)
 }
 
 func |> <A, B, C>(f1: B -> C, f2: A -> B) -> A -> C {

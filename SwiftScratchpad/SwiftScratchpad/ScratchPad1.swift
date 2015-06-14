@@ -197,6 +197,7 @@ func comparisons() {
 func chains() {
     let array = [1, 2, 3, 4, 5]
     let array2 = array.map { $0 }
+
     .filter { $0 > 3 }
         .map { $0 + 2 }
         .map { $0 + 3 }
@@ -219,6 +220,7 @@ func reduceBool() {
     
     let allTrue = someBools.reduce(true) { $0 && $1 }
     let anyFalse = someBools.reduce(false) { $0 || $1 == false }
+    print(anyFalse)
     
     let anyFalse2 = someBools.reduce(false) { accum, bool2 in
         return accum || !bool2
@@ -447,12 +449,13 @@ func structAsAWayToDefineConstants() {
     }
     
     let someSegueID = SegueIdentifiers.FirstViewController
+    print(someSegueID, someConstant, someOtherConstant)
     
     struct CellIdentifiers {
         static let CoolCell = "CoolCellIdentifier"
     }
     
-    let someCellId = CellIdentifiers.CoolCell
+    print(CellIdentifiers.CoolCell)
 }
 
 func enumAsAWayToDefineConstants() {
@@ -464,6 +467,8 @@ func enumAsAWayToDefineConstants() {
     
     let someConstant = CoolEnum.Constant1.rawValue
     let someOtherConstant = CoolEnum.Constant2.rawValue
+    
+    print(someConstant, someOtherConstant)
 }
 
 func finalClass() {
@@ -488,4 +493,5 @@ func testOptionalChain() {
 //    if var something = aDict["test"] as? String {
 //
 //    }
+    print(aDict)
 }
