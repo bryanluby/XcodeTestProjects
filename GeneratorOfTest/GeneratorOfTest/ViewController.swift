@@ -16,9 +16,7 @@ class ViewController: UIViewController {
     }
 
     func incrementGen() {
-        var genOf = GeneratorOf { self.item++ }
-        if let nextGen = genOf.next() {
-            println(item)
-        }
+        let genOf = anyGenerator { self.item++ }
+        print(genOf.next())
     }
 }

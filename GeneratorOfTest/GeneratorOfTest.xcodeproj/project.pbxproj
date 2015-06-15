@@ -156,6 +156,7 @@
 		908A8B8C1B0F5E6600E18E0A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Bryan Luby";
 				TargetAttributes = {
@@ -409,6 +410,7 @@
 				908A8BB51B0F5E6700E18E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		908A8BB61B0F5E6700E18E0A /* Build configuration list for PBXNativeTarget "GeneratorOfTestTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				908A8BB81B0F5E6700E18E0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
