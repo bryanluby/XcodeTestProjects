@@ -8,10 +8,10 @@
 
 import Foundation
 
-func callOnBackgroundQueue(f: () -> ()) {
+func callOnBackgroundQueue(f: () -> Void) {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { f() }
 }
 
-func callOnMainQueue(f: () -> ()) {
+func callOnMainQueue(f: () -> Void) {
     dispatch_async(dispatch_get_main_queue()) { f() }
 }

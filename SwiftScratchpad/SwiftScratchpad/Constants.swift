@@ -47,8 +47,8 @@ enum SegueIdentifiers: String {
 }
 
 func tester() {
-    let happyEmoji = Emojis.Happy.rawValue
-    let happyEmoji2 = Constants.Emojis.Happy
+    print(Emojis.Happy.rawValue)
+    print(Constants.Emojis.Happy)
 }
 
 struct CellIdentifiers2 {
