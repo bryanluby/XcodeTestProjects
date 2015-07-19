@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Stacks
+//  StackViews
 //
 //  Created by Bryan Luby on 7/19/15.
 //  Copyright © 2015 Bryan Luby. All rights reserved.

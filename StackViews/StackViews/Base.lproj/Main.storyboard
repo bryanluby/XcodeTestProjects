@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8152.3" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RYe-C3-z0b">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Table View Controller-->
@@ -54,8 +55,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Horizontal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d4J-zW-6k3">
-                                                    <rect key="frame" x="15" y="6" width="74.5" height="19.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Distribution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d4J-zW-6k3">
+                                                    <rect key="frame" x="15" y="6" width="84.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -74,6 +75,9 @@
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <segue destination="4zM-qP-QVM" kind="show" id="lLv-ua-z2h"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lY9-9P-Ark" detailTextLabel="emb-9b-GFL" style="IBUITableViewCellStyleSubtitle" id="D8W-yH-bO9">
                                         <rect key="frame" x="0.0" y="152" width="600" height="44"/>
@@ -120,7 +124,7 @@
         <!--Animate Axis on Rotation-->
         <scene sceneID="H33-yw-dWq">
             <objects>
-                <viewController title="Animate Axis on Rotation" id="1fS-Wx-mQa" customClass="ViewController" customModule="Stacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Animate Axis on Rotation" id="1fS-Wx-mQa" customClass="AxisViewController" customModule="StackViews" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DfH-kp-RMn"/>
                         <viewControllerLayoutGuide type="bottom" id="t2U-u4-9XO"/>
@@ -129,7 +133,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" layoutMarginsRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drH-xM-V23">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="drH-xM-V23">
                                 <rect key="frame" x="277" y="72" width="46" height="380"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boe-T2-wqu">
@@ -190,6 +194,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UbX-VK-etb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2005" y="386"/>
+        </scene>
+        <!--Distribution-->
+        <scene sceneID="8Mj-fP-7mi">
+            <objects>
+                <viewController title="Distribution" id="4zM-qP-QVM" customClass="DistributionViewController" customModule="StackViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R2L-Ps-I4W"/>
+                        <viewControllerLayoutGuide type="bottom" id="68e-uo-eIN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sc0-9A-bqu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" layoutMarginsRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXH-gO-JM9">
+                                <rect key="frame" x="20" y="72" width="560" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gQ-p5-CWq">
+                                        <rect key="frame" x="0.0" y="45" width="447.5" height="20.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBj-Ix-YF3">
+                                        <rect key="frame" x="447.5" y="45" width="56" height="20.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHb-aF-hmj">
+                                        <rect key="frame" x="503.5" y="45" width="56.5" height="20.5"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="HLA-70-fI2"/>
+                                </constraints>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JOM-cM-2oQ">
+                                <rect key="frame" x="9" y="190" width="583" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Fill"/>
+                                    <segment title="FillEqually"/>
+                                    <segment title="FillProportionally"/>
+                                    <segment title="EqualSpacing"/>
+                                    <segment title="EqualCentering"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="4zM-qP-QVM" eventType="valueChanged" id="XVd-oH-hlI"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hXH-gO-JM9" firstAttribute="top" secondItem="R2L-Ps-I4W" secondAttribute="bottom" constant="8" id="5C2-3l-83u"/>
+                            <constraint firstItem="JOM-cM-2oQ" firstAttribute="top" secondItem="hXH-gO-JM9" secondAttribute="bottom" constant="8" id="INB-az-6wK"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="hXH-gO-JM9" secondAttribute="leading" id="fwC-a5-nxj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hXH-gO-JM9" secondAttribute="trailing" id="gJz-mN-lqn"/>
+                            <constraint firstItem="JOM-cM-2oQ" firstAttribute="leading" secondItem="sc0-9A-bqu" secondAttribute="leading" constant="9" id="mGy-rx-DFU"/>
+                            <constraint firstAttribute="trailing" secondItem="JOM-cM-2oQ" secondAttribute="trailing" constant="8" id="ynO-9v-86n"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="hXH-gO-JM9" id="48k-0W-4Jr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LYY-HH-le2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="1076"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oge-ua-mho">

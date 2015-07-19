@@ -1,3 +1,3 @@
-# Stacks
+# StackViews
 
 ## Testing out `UIStackView`

@@ -20,7 +20,7 @@
 - [SecureCoding](SecureCoding) - `NSSecureCoding`.
 - [SetNilValueForKey](SetNilValueForKey) - `setNilValueForKey:`.
 - [SpringyCollectionView](SpringyCollectionView) - A springy `UICollectionViewFlowLayout`.
-- [Stacks](Stacks) - Testing out `UIStackView`.
+- [StackViews](StackViews) - Testing out `UIStackView`.
 - [StoringCredentials](StoringCredentials) - Testing out storing `NSURLCredential`.
 - [SwiftGenerators](SwiftGenerators) - Testing out Swift generators.
 - [SwiftScratchpad](SwiftScratchpad) - Testing out random Swift things.

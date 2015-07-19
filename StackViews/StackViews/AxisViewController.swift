@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  Stacks
+//  AxisViewController.swift
+//  StackViews
 //
 //  Created by Bryan Luby on 7/19/15.
 //  Copyright © 2015 Bryan Luby. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AxisViewController: UIViewController {
     @IBOutlet private weak var stackView: UIStackView!
     
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection?) {
