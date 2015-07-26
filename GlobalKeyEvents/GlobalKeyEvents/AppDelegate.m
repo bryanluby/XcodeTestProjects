@@ -23,7 +23,7 @@
     AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)options);
     
     self.eventHandler = [NSEvent addGlobalMonitorForEventsMatchingMask:NSKeyDownMask handler:^(NSEvent *event) {
-        NSLog(@"Event: %@", event);
+        NSLog(@"%@", event.characters);
     }];
 }
 
